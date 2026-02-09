@@ -1,0 +1,34 @@
+@Hostname = localhost
+@port = 7106
+@host = https://{{Hostname}}:{{port}}
+
+###
+POST {{host}}/register
+Content-Type: application/json
+
+{
+    "email":"example4@gmail.com",
+    "password":"Senha@123456",
+    "cpf":"111.222.333-44"
+}
+###
+# @name login
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "email":"example4@gmail.com",
+    "password":"Senha@123456"
+}
+###
+@authToken = {{login.response.body.accessToken}}
+###
+GET {{host}}/user/187d2381-5478-49eb-a4a5-b64a81481056
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+
+###
+DELETE {{host}}/user/187d2381-5478-49eb-a4a5-b64a81481056
+Authorization: Bearer {{authToken}}
+Content-Type: application/json
+

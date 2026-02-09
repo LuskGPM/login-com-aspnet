@@ -1,19 +1,18 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using ApiAuth.Model.Schemas;
 
 namespace ApiAuth.Model;
 
-public class UserDatabase : DbContext
+public class UserDatabase(DbContextOptions<UserDatabase> opt) : IdentityDbContext<User>(opt)
 {
     public DbSet<User> Usuarios { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<User>()
-        .HasIndex(user => user.Cpf)
-        .IsUnique();
+        base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<User>()
-        .HasIndex(user => user.Email)
+        .HasIndex(user => user.Cpf)
         .IsUnique();
     }
 }
