@@ -11,7 +11,6 @@
 - ✅ **Controle de Acesso**: Endpoints protegidos com autorização baseada em claims
 - ✅ **Validação de Dados**: DTOs para validação de entrada e saída
 - ✅ **Persistência em Banco de Dados**: SQLite com migrações Entity Framework
-- ✅ **Documentação Interativa**: OpenAPI (Swagger) disponível em desenvolvimento
 
 ## 🏗️ Arquitetura e Estrutura
 
@@ -44,7 +43,6 @@ ApiAuth/
 | **Identity Framework** | 10.0.2 | Autenticação e autorização |
 | **SQLite** | 10.0.2 | Banco de dados |
 | **AutoMapper** | 16.0.0 | Mapeamento de objetos |
-| **OpenAPI** | 10.0.2 | Documentação de API |
 
 ## 🚀 Como Começar
 
