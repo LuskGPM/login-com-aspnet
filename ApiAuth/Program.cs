@@ -14,12 +14,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddIdentityApiEndpoints<User>()
     .AddEntityFrameworkStores<UserDatabase>();
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddOpenApi();
-
 var app = builder.Build();
-
-if (app.Environment.IsDevelopment()) app.MapOpenApi();
 
 app.MapGet("/", () => "Olá, Mundo!");
 app.MapIdentityEndpoints();
