@@ -334,11 +334,6 @@ dotnet build
 
 Gera a saída compilada em `bin/Debug/` ou `bin/Release/`
 
-### Publicar para produção
-
-```bash
-dotnet publish -c Release -o ./publish
-```
 
 ## 📋 Requisitos Funcionais Atendidos
 
@@ -357,7 +352,6 @@ dotnet publish -c Release -o ./publish
 - ✅ Criptografia de senhas com PBKDF2
 - ✅ Persistência de dados com Entity Framework Core
 - ✅ Validação de unicidade de CPF
-- ✅ Documentação de API com OpenAPI
 - ✅ Estrutura de projeto organizada e escalável
 
 ## 📖 Referências
@@ -366,7 +360,6 @@ dotnet publish -c Release -o ./publish
 - [Entity Framework Core](https://docs.microsoft.com/pt-br/ef/core/)
 - [ASP.NET Core Identity](https://docs.microsoft.com/pt-br/aspnet/core/security/authentication/identity/)
 - [AutoMapper](https://automapper.org/)
-- [OpenAPI Specification](https://swagger.io/specification/)
 
 ## 📄 Licença
 
